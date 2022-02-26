@@ -4,6 +4,8 @@ import './App.css';
 import { useDispatch } from 'react-redux';
 import FeedBackOne from '../FeedBackOne/FeedBackOne';
 import Understanding from '../Understanding/Understanding';
+import Supported from '../Supported/Supported';
+import Comments from '../Comments/Comments';
 
 function App() {
   // const dispatch = useDispatch();
@@ -24,6 +26,7 @@ function App() {
 
 
   return (
+    //<Router>
     <div className='App'>
       <header className='App-header'>
         <h1 className='App-title'>Feedback!</h1>
@@ -31,8 +34,11 @@ function App() {
       </header>
       <FeedBackOne/>
       <Understanding/>
+      <Supported/>
+      <Comments/>
 
     </div>
+    //</Router>
     
   
 
