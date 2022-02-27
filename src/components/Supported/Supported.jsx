@@ -5,9 +5,6 @@ function Supported() {
     const history = useHistory();
     const [useSupported, setUseSupported] = useState (0);
 
-
-  
-
     const handleSubmit = () => {
       console.log('submitted');
         dispatch({

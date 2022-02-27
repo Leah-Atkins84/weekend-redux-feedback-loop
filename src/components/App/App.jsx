@@ -7,7 +7,7 @@ import FeedBackOne from '../FeedBackOne/FeedBackOne';
 import Understanding from '../Understanding/Understanding';
 import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
-
+import ReviewPage from '../ReviewPage/ReviewPage';
 
 function App() {
     // const dispatch = useDispatch();
@@ -48,6 +48,10 @@ function App() {
 
                 <Route path="/Comments" exact>
                     <Comments/>
+                </Route>
+
+                <Route path="/ReviewPage" exact>
+                  <ReviewPage/>
                 </Route>
 
 

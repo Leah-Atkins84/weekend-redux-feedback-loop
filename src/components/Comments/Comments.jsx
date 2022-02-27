@@ -1,6 +1,8 @@
+import {useHistory} from 'react-router-dom';
 import {useState} from 'react';
 
 function Comments() {
+    const history = useHistory();
     const [useComments, setUseComments] = useState ('');
 
     const handleSubmit = () => {
@@ -9,7 +11,7 @@ function Comments() {
         type: 'PAGE_FOUR',
         payload: useComments
     })
-        //history.push('/')
+        history.push('/ReviewPage')
     }
     
     return(
@@ -21,7 +23,7 @@ function Comments() {
             type="text"
             onChange={(event)=>setUseComments(event.target.value)}
             />
-            <button type='submit'>Next</button>
+            <button type='submit' onClick={handleSubmit}>Next</button>
         </form>
     )
 }

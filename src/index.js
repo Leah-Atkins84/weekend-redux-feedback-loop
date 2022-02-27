@@ -9,21 +9,21 @@ import logger from 'redux-logger';
 
 
 
-const PageOne  = (state = [], action) => {
+const PageOne  = (state = 0, action) => {
     if (action.type ===  'FEED_BACK_ONE' ){
       return [action.payload];
     }
       return state;
   }
 
-const UnderstandingReducer  = (state = [], action) => {
+const UnderstandingReducer  = (state = 0, action) => {
     if (action.type ===  'PAGE_TWO' ){
       return [action.payload];
     }
       return state;
   }
 
-const SupportedReducer  = (state = [], action) => {
+const SupportedReducer  = (state = 0, action) => {
     if (action.type ===  'PAGE_THREE' ){
       return [action.payload];
     }
@@ -31,7 +31,7 @@ const SupportedReducer  = (state = [], action) => {
   }
 
 
-const CommentReducer  = (state = [], action) => {
+const CommentReducer  = (state = '', action) => {
     if (action.type ===  'PAGE_FOUR' ){
       return [action.payload];
     }
