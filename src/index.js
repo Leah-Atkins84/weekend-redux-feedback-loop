@@ -31,12 +31,21 @@ const SupportedReducer  = (state = [], action) => {
   }
 
 
+const CommentReducer  = (state = [], action) => {
+    if (action.type ===  'PAGE_FOUR' ){
+      return [action.payload];
+    }
+      return state;
+  }
+
+
 
 const storeData = createStore(
     combineReducers({
         PageOne,
         UnderstandingReducer,
-        SupportedReducer
+        SupportedReducer,
+        CommentReducer
     }),
     applyMiddleware(logger)
 )
