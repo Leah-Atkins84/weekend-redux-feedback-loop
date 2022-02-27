@@ -16,8 +16,15 @@ const PageOne  = (state = [], action) => {
       return state;
   }
 
-  const UnderstandingReducer  = (state = [], action) => {
+const UnderstandingReducer  = (state = [], action) => {
     if (action.type ===  'PAGE_TWO' ){
+      return [action.payload];
+    }
+      return state;
+  }
+
+const SupportedReducer  = (state = [], action) => {
+    if (action.type ===  'PAGE_THREE' ){
       return [action.payload];
     }
       return state;
@@ -29,6 +36,7 @@ const storeData = createStore(
     combineReducers({
         PageOne,
         UnderstandingReducer,
+        SupportedReducer
     }),
     applyMiddleware(logger)
 )

@@ -1,6 +1,5 @@
 import {useHistory} from 'react-router-dom';
 import {useState} from 'react';
-import { useSelector } from 'react-redux';
 
 
 function FeedBackOne() {
