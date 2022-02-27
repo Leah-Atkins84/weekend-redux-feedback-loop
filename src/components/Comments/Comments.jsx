@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 function Comments() {
-    const [useComments, SetUseComments] = useState (0);
+    const [useComments, setUseComments] = useState ('');
 
     const handleSubmit = () => {
       console.log('submitted');
@@ -9,7 +9,7 @@ function Comments() {
         type: 'PAGE_FOUR',
         payload: useComments
     })
-        history.push('/')
+        //history.push('/')
     }
     
     return(
@@ -19,7 +19,7 @@ function Comments() {
             <h3>Any Comments you want to leave?</h3>
             <input 
             type="text"
-            onChange={(event)=>SetUseComments(event.target.value)}
+            onChange={(event)=>setUseComments(event.target.value)}
             />
             <button type='submit'>Next</button>
         </form>
