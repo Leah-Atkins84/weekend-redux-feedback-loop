@@ -10,15 +10,18 @@ function Understanding() {
 
     const handleSubmit = () => {
         console.log('submitted');
+        if (useUnderstanding){
         dispatch({type: 'PAGE_TWO', payload: useUnderstanding})
         history.push('/Supported')
+        }
+        else alert('feedback not complete')
     }
     return (
         <>
             <h1>Page 2 of 4</h1>
 
             <h3>How well are you understanding the content?</h3>
-            <input type="number" placeholder="On a scale of 1-5.."
+            <input required type="number" placeholder="On a scale of 1-5.."
                 onChange={
                     (event) => setUseUnderstanding(event.target.value)
                 }/>

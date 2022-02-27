@@ -16,18 +16,18 @@ function ReviewPage() {
 
         console.log(`Adding feedback`, {feeling, understanding, support, comments});
 
-        // TODO - axios request to server to feedback
+        // - axios request to server to feedback
         axios.post('/feedback', {feeling, understanding, support, comments}).then(response => {
             console.log('Yay');
         }).catch(error => {
             console.log('Error POSTing!!', error);
             alert('Feedback not good');
         })
-        history.push('/Success')
+        history.push('/Success')// sends user to success page
     };
 
 
-    return (
+    return (// displays all feedback
         <>
             <p>{feeling}</p>
             <p>{understanding}</p>

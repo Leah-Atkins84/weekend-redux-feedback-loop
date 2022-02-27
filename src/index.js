@@ -8,7 +8,7 @@ import {applyMiddleware, combineReducers, createStore } from 'redux';
 import logger from 'redux-logger';
 
 
-
+/*-------------------Reducers--------------------- */
 const PageOne  = (state = 0, action) => {
     if (action.type ===  'FEED_BACK_ONE' ){
       return action.payload;
@@ -39,7 +39,7 @@ const CommentReducer  = (state = '', action) => {
   }
 
 
-
+//-----------------Store----------------------
 const storeData = createStore(
     combineReducers({
         PageOne,
