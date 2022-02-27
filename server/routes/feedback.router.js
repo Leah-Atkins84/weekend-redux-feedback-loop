@@ -9,7 +9,7 @@ router.post('/',  (req, res) => {
   
     let queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
                      VALUES ($1, $2, $3, $4);`;
-    pool.query(queryText, [feedback.feeling, feedback.understanding, feedback.support, feedback.comments])
+    pool.query(queryText, [newFeedback.feeling, newFeedback.understanding, newFeedback.support, newFeedback.comments])
       .then(result => {
         res.sendStatus(201);
       })

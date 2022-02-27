@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import {useDispatch} from 'react-redux';
-import {HashRouter as Router, Route} from 'react-router-dom';
+import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import FeedBackOne from '../FeedBackOne/FeedBackOne';
 import Understanding from '../Understanding/Understanding';
 import Supported from '../Supported/Supported';
@@ -52,6 +52,10 @@ function App() {
 
                 <Route path="/ReviewPage" exact>
                   <ReviewPage/>
+                </Route>
+                <Route path="/Success" exact>
+                  <h1>Success!!!</h1>
+                  
                 </Route>
 
 

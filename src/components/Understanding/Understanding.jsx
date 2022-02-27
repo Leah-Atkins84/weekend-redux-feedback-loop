@@ -1,31 +1,29 @@
 import {useHistory} from 'react-router-dom';
 import {useState} from 'react';
+import {useDispatch} from 'react-redux'
 
 
 function Understanding() {
     const history = useHistory();
-    const [useUnderstanding, setUseUnderstanding] = useState (0);
+    const dispatch = useDispatch();
+    const [useUnderstanding, setUseUnderstanding] = useState(0);
 
     const handleSubmit = () => {
-      console.log('submitted');
-        dispatch({
-        type: 'PAGE_TWO',
-        payload: useUnderstanding
-    })
-        history.push('/Supported') 
+        console.log('submitted');
+        dispatch({type: 'PAGE_TWO', payload: useUnderstanding})
+        history.push('/Supported')
     }
     return (
-        <form>
+        <>
             <h1>Page 2 of 4</h1>
 
             <h3>How well are you understanding the content?</h3>
-            <input 
-            type="number" 
-            placeholder="On a scale of 1-5.."
-            onChange={(event)=>setUseUnderstanding(event.target.value)}
-            />
-            <button type='submit' onClick={handleSubmit}>Next</button>
-        </form>
+            <input type="number" placeholder="On a scale of 1-5.."
+                onChange={
+                    (event) => setUseUnderstanding(event.target.value)
+                }/>
+            <button onClick={handleSubmit}>Next</button>
+        </>
     )
 }
 
