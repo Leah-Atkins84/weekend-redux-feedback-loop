@@ -13,11 +13,12 @@ function FeedBackOne() {
         console.log('submitted');
         if (useFeeling) {
             dispatch({type: 'FEED_BACK_ONE', payload: useFeeling})
-        history.push('/Understanding')// page goes to next on submit
-        }
-        else alert('feedback not complete')// if not complete will alert
-        
-    }// end handle submit
+            history.push('/Understanding') // page goes to next on submit
+        } else 
+            alert('feedback not complete')
+         // if not complete will alert
+
+    } // end handle submit
 
 
     return (
@@ -32,6 +33,6 @@ function FeedBackOne() {
             <button onClick={handleSubmit}>Next</button>
         </>
     )
-}// end FeedBackOne
+} // end FeedBackOne
 
 export default FeedBackOne;

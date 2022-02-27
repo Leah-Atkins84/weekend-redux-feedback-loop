@@ -9,9 +9,14 @@ function Supported() {
 
     const handleSubmit = () => {
         console.log('submitted');
-        dispatch({type: 'PAGE_THREE', payload: useSupported})
-        history.push('/Comments')
-    }
+        if (useSupported) {
+            dispatch({type: 'PAGE_THREE', payload: useSupported})
+            history.push('/Comments') // page goes to next on submit
+        } else 
+            alert('feedback not complete');
+         // if not complete will alert
+    } // end handleSubmit
+    
     return (
         <>
             <h1>Page 3 of 4</h1>
@@ -25,6 +30,6 @@ function Supported() {
         </>
 
     )
-}
+} // end Supported
 
 export default Supported;
