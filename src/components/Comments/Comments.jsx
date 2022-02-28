@@ -10,8 +10,8 @@ function Comments() {
     const handleSubmit = () => {
         console.log('submitted');
         dispatch({type: 'PAGE_FOUR', payload: useComments})
-        history.push('/ReviewPage')
-    }
+        history.push('/ReviewPage') // brings user to review page when next is clicked
+    } // end handleSubmit
 
     return (
         <>
@@ -25,6 +25,6 @@ function Comments() {
             <button onClick={handleSubmit}>Next</button>
         </>
     )
-}
+}// end Comments
 
 export default Comments;
